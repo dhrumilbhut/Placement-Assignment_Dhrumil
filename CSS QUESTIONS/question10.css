@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  height: 15vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.gray {
+  background-color: lightgray;
+}
+
+.main {
+  height: 40vh;
+  background-color: gray;
+}
+
+.hero {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.5rem;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
+
+.footer {
+  height: 40vh;
+  background-color: lightgray;
+}
+
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 0.8rem;
+  }
+
+  .header {
+    gap: 0.6rem;
+  }
+
+  section {
+    gap: 0.5rem;
+  }
+
+  .main {
+    height: 25vh;
+  }
+
+  .hero {
+    grid-template-columns: repeat(1, auto);
+    gap: 1rem;
+  }
+}

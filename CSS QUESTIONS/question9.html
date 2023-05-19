@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      aside,
+      header,
+      footer,
+      article,
+      span {
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        background-color: lightblue;
+        padding: 20px;
+      }
+
+      aside {
+        background-color: green;
+        margin-top: 20px;
+      }
+
+      header {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: lightseagreen;
+      }
+
+      article {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: orange;
+      }
+
+      .flex-wrapper {
+        display: flex;
+      }
+
+      .image {
+        display: inline-block;
+        height: 50px;
+        background-color: rgb(208, 192, 47);
+        flex-grow: 1;
+        margin: 150px 20px 0px 20px;
+      }
+      .bg {
+        margin-left: 300px;
+        width: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="grid-wrapper">
+        <header>Header</header>
+        <aside>
+          <h4>Aside</h4>
+        </aside>
+        <article>
+          <h1>Article</h1>
+
+          <div class="flex-wrapper">
+            <span class="image">test</span>
+            <span class="image">test</span>
+            <span class="image">test</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
