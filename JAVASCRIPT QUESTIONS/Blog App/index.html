@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog Web App</title>
+    <title>Blog App</title>
   </head>
   <body>
-    <h1>Blog Web App</h1>
-
-    <form id="addBlogForm">
-      <input type="text" id="titleInput" placeholder="Enter title" required />
-      <textarea
-        id="contentInput"
-        placeholder="Enter content"
-        required
-      ></textarea>
-      <button type="submit">Add Blog</button>
+    <h1>Blog App</h1>
+    <form id="addPostForm">
+      <input type="text" id="postTitle" placeholder="Title" required />
+      <textarea id="postBody" placeholder="Body" required></textarea>
+      <button type="submit">Add Post</button>
     </form>
-
-    <ul id="blogList"></ul>
+    <div id="posts"></div>
 
     <script src="script.js"></script>
   </body>

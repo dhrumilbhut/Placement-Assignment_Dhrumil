@@ -1,38 +1,49 @@
-// script.js
+const postsContainer = document.getElementById("posts");
+const addPostForm = document.getElementById("addPostForm");
+const postTitleInput = document.getElementById("postTitle");
+const postBodyInput = document.getElementById("postBody");
 
-// Fetch blogs from API and display them in the UI
-function fetchBlogs() {
+// Function to create a blog post element
+function createPostElement(post) {
+  const postElement = document.createElement("div");
+  postElement.innerHTML = `
+    <h2>${post.title}</h2>
+    <p>${post.body}</p>
+    <button class="deleteBtn" data-id="${post.id}">Delete</button>
+  `;
+  return postElement;
+}
+
+// Fetch blog posts from the server
+function fetchPosts() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
-    .then((blogs) => {
-      const blogList = document.getElementById("blogList");
-      blogList.innerHTML = "";
+    .then((posts) => {
+      postsContainer.innerHTML = ""; // Clear existing posts
 
-      blogs.forEach((blog) => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-            <h3>${blog.title}</h3>
-            <p>${blog.body}</p>
-            <button class="delete" data-id="${blog.id}">Delete</button>
-          `;
-        blogList.appendChild(listItem);
+      posts.forEach((post) => {
+        const postElement = createPostElement(post);
+        postsContainer.appendChild(postElement);
+      });
+
+      // Attach event listener to delete buttons
+      const deleteButtons = document.getElementsByClassName("deleteBtn");
+      Array.from(deleteButtons).forEach((button) => {
+        button.addEventListener("click", deletePost);
       });
     })
     .catch((error) => {
-      console.error("Error fetching blogs:", error);
+      console.error("Error fetching blog posts:", error);
     });
 }
 
-// Add a new blog
-function addBlog(event) {
+// Add a new blog post
+function addPost(event) {
   event.preventDefault();
 
-  const titleInput = document.getElementById("titleInput");
-  const contentInput = document.getElementById("contentInput");
-
-  const newBlog = {
-    title: titleInput.value,
-    body: contentInput.value,
+  const newPost = {
+    title: postTitleInput.value,
+    body: postBodyInput.value,
   };
 
   fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -40,46 +51,45 @@ function addBlog(event) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newBlog),
+    body: JSON.stringify(newPost),
   })
     .then((response) => response.json())
-    .then((blog) => {
-      titleInput.value = "";
-      contentInput.value = "";
-      console.log(newBlog);
+    .then((post) => {
+      const postElement = createPostElement(post);
+      postsContainer.appendChild(postElement);
 
-      fetchBlogs(); // Refresh the blog list
+      // Attach event listener to delete button
+      const deleteButton = postElement.querySelector(".deleteBtn");
+      deleteButton.addEventListener("click", deletePost);
+
+      // Clear input fields
+      postTitleInput.value = "";
+      postBodyInput.value = "";
     })
     .catch((error) => {
-      console.error("Error adding blog:", error);
+      console.error("Error adding blog post:", error);
     });
 }
 
-// Delete a blog
-function deleteBlog(event) {
-  if (event.target.classList.contains("delete")) {
-    const blogId = event.target.dataset.id;
+// Delete a blog post
+function deletePost(event) {
+  const postId = event.target.getAttribute("data-id");
 
-    fetch(`https://jsonplaceholder.typicode.com/posts/${blogId}`, {
-      method: "DELETE",
+  fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+    method: "DELETE",
+  })
+    .then(() => {
+      // Remove the post element from the DOM
+      const postElement = event.target.parentNode;
+      postsContainer.removeChild(postElement);
     })
-      .then((response) => {
-        if (response.ok) {
-          fetchBlogs(); // Refresh the blog list
-          console.log("Deleted");
-        } else {
-          console.error("Error deleting blog:", response.status);
-        }
-      })
-      .catch((error) => {
-        console.error("Error deleting blog:", error);
-      });
-  }
+    .catch((error) => {
+      console.error("Error deleting blog post:", error);
+    });
 }
 
-// Attach event listeners
-document.getElementById("addBlogForm").addEventListener("submit", addBlog);
-document.getElementById("blogList").addEventListener("click", deleteBlog);
+// Event listener for adding a post
+addPostForm.addEventListener("submit", addPost);
 
-// Fetch initial blogs on page load
-fetchBlogs();
+// Fetch initial posts
+fetchPosts();
