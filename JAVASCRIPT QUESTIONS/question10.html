@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .debounced {
+        background-color: rgba(242, 18, 18, 0.256);
+        margin-top: 50px;
+
+        border: 1px solid black;
+        min-height: 15px;
+        min-width: 30px;
+        max-width: fit-content;
+        padding: 5px;
+      }
+
+      #input-field {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="input-field"
+      onkeyup="handleDebouncedInput()"
+      placeholder="write something here"
+    />
+    <div>
+      Anything written above will be shown in the box after 3sec
+      <p class="debounced"></p>
+    </div>
+
+    <script>
+      let debounceTimeout;
+
+      function handleDebouncedInput() {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(processInput, 3000);
+      }
+
+      function processInput() {
+        const inputField = document.getElementById("input-field");
+        console.log("Input:", inputField.value);
+
+        const debouncedValue = document.querySelector(".debounced");
+
+        debouncedValue.innerHTML = inputField.value;
+
+        if (inputField.value === "") {
+          debouncedValue.innerHTML = "Here";
+        }
+      }
+    </script>
+  </body>
+</html>
