@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: auto;
+  background-color: rgb(129, 121, 121);
+}
+
+.headerlight {
+  width: 90%;
+  height: 10vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  border: 5px solid black;
+}
+.headerdark {
+  width: 90%;
+  height: 10vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  border: 5px solid white;
+}
+
+.mainlight {
+  width: 90%;
+  height: 70vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.maindark {
+  width: 90%;
+  height: 70vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+.footerlight {
+  height: 10vh;
+  width: 90%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.footerdark {
+  height: 10vh;
+  width: 90%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.buttonlight {
+  background-color: #0d0d0d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+.buttondark {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+.buttonlight:hover {
+  box-shadow: 1px 1px 5px 1px;
+}
