@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iNeuron Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__logo">
+          <img src="./assets/ineuron-logo.png" alt="logo" class="logo" />
+        </div>
+
+        <ul>
+          <li>
+            <a href="#">Courses</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+              <li>
+                <a href="#">Web Devlopment</a>
+                <!-- Second Tier Drop Down -->
+                <ul>
+                  <li><a href="#">Javascript</a></li>
+                  <li><a href="#">Node js</a></li>
+                  <li><a href="#">Python</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Big Data</a></li>
+              <li><a href="#">Data Science</a></li>
+              <li><a href="#">Blockchain</a></li>
+            </ul>
+          </li>
+          <li><a href="#">One Neuron</a></li>
+          <li><a href="#">Job Portal</a></li>
+          <li><a href="#">Internship Portal</a></li>
+          <li><a href="#">Become an affiliate</a></li>
+          <li><a href="#">Hall of Fame</a></li>
+          <li><a href="#">Blog</a></li>
+          <li>
+            <a href="#">Company</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Hack-A-Thon</a></li>
+              <li><a href="#">Job Guarantee</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav__button">
+          <button class="btn__primary">Sign in</button>
+          <button class="btn__secondary">Sign up</button>
+        </div>
+
+        <div class="ham">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <ul class="res__none" id="MyElement">
+        <li>
+          <a href="#">Courses</a>
+          <!-- First Tier Drop Down -->
+          <ul>
+            <li>
+              <a href="#">Web Devlopment</a>
+              <!-- Second Tier Drop Down -->
+              <ul>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Node js</a></li>
+                <li><a href="#">Python</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Big Data</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Blockchain</a></li>
+          </ul>
+        </li>
+        <li><a href="#">One Neuron</a></li>
+        <li><a href="#">Job Portal</a></li>
+        <li><a href="#">Internship Portal</a></li>
+        <li><a href="#">Become an affiliate</a></li>
+        <li><a href="#">Hall of Fame</a></li>
+        <li><a href="#">Blog</a></li>
+        <li>
+          <a href="#">Company</a>
+        </li>
+      </ul>
+
+      <div class="header__hero">
+        <div class="hero__left">
+          <div class="hero__text">
+            <h3 class="lineUp">Learn from the best of industry</h3>
+
+            <h1 class="lineUp1">Highest in quality, affordable in price</h1>
+
+            <p class="lineUp2">
+              Digital entrepreneurs, Youtubers and content creators provide
+              affordable courses across technologies.
+            </p>
+          </div>
+        </div>
+        <div class="hero__right">
+          <div class="hero__right__img">
+            <img
+              src="./assets/hero-influencers1.png"
+              class="lineUpRight"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="courses">
+      <h1 class="courses__heading">What you will learn</h1>
+
+      <div class="courses__input">
+        <div class="input">
+          <div class="container1">
+            <input type="email" placeholder="Course Name" id="email" />
+            <button type="submit" id="search-btn">Search</button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="select">
+            <select>
+              <option value="1">Live Programs</option>
+              <option value="2">Affordable Programs</option>
+              <option value="3">Community Programs</option>
+              <option value="3">One Neuron</option>
+              <option value="3">Test Series</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="courses__buttons">
+        <button class="btn btn-active">Live Programs</button>
+        <button class="btn">Affordable Programs</button>
+        <button class="btn">Community Programs</button>
+        <button class="btn">One Neuron</button>
+        <button class="btn">Test Series</button>
+      </div>
+
+      <div class="courses-container">
+        <div class="cards__course">
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course1.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Advance Facebook Marketing</h3>
+              <p>Amresh Bharti</p>
+              <p>&#8377; 7000</p>
+            </div>
+          </div>
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course2.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Big Data Bootcamp</h3>
+              <p>Sudhansu Kumar</p>
+              <p>&#8377; 17000</p>
+            </div>
+          </div>
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course3.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Youtube Mastery</h3>
+              <p>Amresh Bharti</p>
+              <p>&#8377; 7000</p>
+            </div>
+          </div>
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course4.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>DSA for FAANG Prepartion</h3>
+              <p>Anurag Tiwari</p>
+              <p>&#8377; 4000</p>
+            </div>
+          </div>
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course5.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Python Fullstack Devlopment</h3>
+              <p>Naveen Reddy</p>
+              <p>&#8377; 7000</p>
+            </div>
+          </div>
+          <div class="card__course lineUpRight">
+            <div class="card__img">
+              <img src="./assets/live-course6.jpg" alt="" />
+            </div>
+            <div class="card-text">
+              <h3>Digital Marketing</h3>
+              <p>Amresh Bharti</p>
+              <p>&#8377; 11000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievers">
+      <h1>Our Achiever’s Work with</h1>
+      <hr />
+      <div class="achiever__img">
+        <img src="./assets/company1.png" alt="" />
+        <img src="./assets/company2.png" alt="" />
+        <img src="./assets/company3.png" alt="" />
+        <img src="./assets/company4.png" alt="" />
+        <img src="./assets/company5.png" alt="" />
+      </div>
+      <hr />
+    </section>
+
+    <section class="testimonials">
+      <h1 class="heading">Hall of fame</h1>
+
+      <div class="testimonials__cards">
+        <div class="testimonial__card">
+          <img src="./assets/hof1.jpeg" alt="" />
+          <h2>Srivastav G.</h2>
+          <p>Amazon</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quasi
+            cum corrupti vitae distinctio? Id aperiam nihil voluptatibus
+            obcaecati veniam.
+          </p>
+          <span>
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+        </div>
+
+        <div class="testimonial__card">
+          <img src="./assets/hof2.jpeg" alt="" />
+          <h2>Sammer Kumar</h2>
+          <p>Microsoft</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quasi
+            cum corrupti vitae distinctio? Id aperiam nihil voluptatibus
+            obcaecati veniam.
+          </p>
+          <span>
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+        </div>
+
+        <div class="testimonial__card">
+          <img src="./assets/hof3.jpeg" alt="" />
+          <h2>Jay Prakash</h2>
+          <p>Wells fargo</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quasi
+            cum corrupti vitae distinctio? Id aperiam nihil voluptatibus
+            obcaecati veniam.
+          </p>
+          <span>
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="team__section slider">
+      <h1>Tech Avengers</h1>
+      <div class="team__container slide-track">
+        <div class="team-profile">
+          <img src="./assets/sudhanshu-sir.png" class="team-img" />
+          <h3 class="team-name">Sudhansu Kumar</h3>
+          <p class="team-role">AI Engineer & CEO</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/hitesh-sir.png" class="team-img" />
+          <h3 class="team-name">Hitesh Choudhary</h3>
+          <p class="team-role">CTO</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/krish-sir.png" class="team-img" />
+          <h3 class="team-name">Krish Nayak</h3>
+          <p class="team-role">CIO</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/telusko-sir.png" class="team-img" />
+          <h3 class="team-name">Navin Reddy</h3>
+          <p class="team-role">Senior VP</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/amresh-sir.png" class="team-img" />
+          <h3 class="team-name">Amresh Bharti</h3>
+          <p class="team-role">VP Marketing</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/mysirg-sir.png" class="team-img" />
+          <h3 class="team-name">Saurabh Shukla</h3>
+          <p class="team-role">Senior VP</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/saksham-sir.png" class="team-img" />
+          <h3 class="team-name">Saksham Choudhary</h3>
+          <p class="team-role">Cyber Security Lead</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/Souranghsu-sir.png" class="team-img" />
+          <h3 class="team-name">Souranghsu Pal</h3>
+          <p class="team-role">Mentor</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/sunny-sir.png" class="team-img" />
+          <h3 class="team-name">Sunny Bhaveen Chandra</h3>
+          <p class="team-role">Data Scientist</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/Mukesh-Otwani-sir.png" class="team-img" />
+          <h3 class="team-name">Mukesh Otwani</h3>
+          <p class="team-role">VP Automation</p>
+        </div>
+
+        <div class="team-profile">
+          <img src="./assets/Kiran-Sahu-mam.png" class="team-img" />
+          <h3 class="team-name">Kiran Sahu</h3>
+          <p class="team-role">Mentor</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <h1>Our Products</h1>
+      <div class="card_wrapper">
+        <div class="card">
+          <div class="prod">
+            <img src="./assets/product1.svg" alt="" />
+          </div>
+          <h2>Job Portal</h2>
+          <p>
+            Use exceptional templates for a stand-out resume minus the sign up
+            process.
+          </p>
+        </div>
+        <div class="card">
+          <div class="prod">
+            <img src="./assets/product2.svg" alt="" />
+          </div>
+          <h2>Internship Portal</h2>
+          <p>
+            iNeuron's self-paced internship portal prioritises hands-on training
+            with 570+ internship projects.
+          </p>
+        </div>
+        <div class="card">
+          <div class="prod">
+            <img src="./assets/product3.svg" alt="" />
+          </div>
+          <h2>Become an affiliate</h2>
+          <p>
+            Explore affiliate marketing opportunities with iNeuron and attain
+            financial frredom.
+          </p>
+        </div>
+        <div class="card">
+          <div class="prod">
+            <img src="./assets/product4.svg" alt="" />
+          </div>
+          <h2>Hall of fame</h2>
+          <p>
+            Our student placements and 10+ career transitions speak volumes
+            about our courses.
+          </p>
+        </div>
+        <div class="card">
+          <div class="prod">
+            <img src="./assets/product5.svg" alt="" />
+          </div>
+          <h2>Blog</h2>
+          <p>Explore all you want about your favourite courses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <h1>Our Partnered Institutions</h1>
+      <div class="partner__img">
+        <img src="./assets/partner1.svg" alt="" />
+        <img src="./assets/partner2.svg" alt="" />
+        <img src="./assets/partner3.svg" alt="" />
+        <img src="./assets/partner4.svg" alt="" />
+        <img src="./assets/partner5.svg" alt="" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-heading">
+        <div class="footer_logo">
+          <img src="./assets/ineuron-logo.png" alt="logo" />
+
+          <address>
+            17th Floor Tower A, Brigade Signature Towers, Sannatammanahalli,
+            Bengaluru, Karnataka 562129.
+          </address>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="footer__data">
+        <ul>
+          <li>Comapny</li>
+          <li>About us</li>
+          <li>Hack-A-Thon</li>
+          <li>Job guarantee</li>
+          <li>Privacy policy</li>
+        </ul>
+        <ul>
+          <li>Information</li>
+          <li>Contact us</li>
+          <li>FAQs</li>
+          <li>Job assistance</li>
+          <li>Terms and conditions</li>
+        </ul>
+        <ul>
+          <li>Products</li>
+          <li>Job Portal</li>
+          <li>Internship Portal</li>
+          <li>Become an affiliate</li>
+          <li>Hall of fame</li>
+          <li>Blog</li>
+        </ul>
+
+        <div class="social__links">
+          <span>
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+          <span>
+            <i class="fa-brands fa-facebook"></i>
+          </span>
+          <span>
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+          <span>
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
